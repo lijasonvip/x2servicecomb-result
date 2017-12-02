@@ -5,5 +5,3 @@
 1. Run ConsumerMain
 
 Note: both provider and consumer make use of [dubbox](https://github.com/dangdangdotcom/dubbox)
-=======
-# dubbo-examples
