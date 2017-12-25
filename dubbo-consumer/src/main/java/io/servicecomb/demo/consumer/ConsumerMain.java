@@ -16,29 +16,40 @@
 
 package io.servicecomb.demo.consumer;
 
-import java.io.IOException;
+import io.servicecomb.foundation.common.utils.Log4jUtils;
+import io.servicecomb.foundation.common.utils.BeanUtils;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.alibaba.dubbo.rpc.RpcContext;
+
+
+
+
+
+
 
 import io.servicecomb.demo.api.AnotherService;
 import io.servicecomb.demo.api.SomeService;
 
 public class ConsumerMain {
-  public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
-    @SuppressWarnings(
-        { "resource", "unused" })
-    ApplicationContext context = new ClassPathXmlApplicationContext("conf/applicationContext.xml");
+  public static void main(String[] args) throws Exception {
+Log4jUtils.init();
+BeanUtils.init();
+
+
+
+
+
+
+
     System.out.println("Dubbo Consumer started successfully...");
 
-    SomeService someService = (SomeService) context.getBean("someServiceRef");
+    SomeService someService = (SomeService) BeanUtils.getBean("someServiceRef");
     System.out.println(someService.sayHello("world"));
 
-    AnotherService anotherService = (AnotherService) context.getBean("anotherServiceRef");
+    AnotherService anotherService = (AnotherService) BeanUtils.getBean("anotherServiceRef");
     System.out.println(anotherService.sayHi("world"));
 
     System.in.read();

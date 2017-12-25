@@ -16,16 +16,26 @@
 
 package io.servicecomb.demo.provider;
 
-import java.io.IOException;
+import io.servicecomb.foundation.common.utils.Log4jUtils;
+import io.servicecomb.foundation.common.utils.BeanUtils;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+
+
+
 
 public class ProviderMain {
-  public static void main(String[] args) throws IOException {
-    @SuppressWarnings(
-        { "resource", "unused" })
-    ApplicationContext context = new ClassPathXmlApplicationContext("conf/applicationContext.xml");
+  public static void main(String[] args) throws Exception {
+Log4jUtils.init();
+BeanUtils.init();
+
+
+
+
+
+
+
     System.out.println("Dubbo provider started successfully...");
 
     System.in.read();

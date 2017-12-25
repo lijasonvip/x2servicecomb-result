@@ -16,11 +16,11 @@
 
 package io.servicecomb.demo.provider;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import io.servicecomb.provider.pojo.RpcSchema;
 
 import io.servicecomb.demo.api.SomeService;
 
-@Service
+@RpcSchema(schemaId = "SomeServiceEndpoint")
 public class SomeServiceImpl implements SomeService {
   @Override
   public String sayHello(String name) {

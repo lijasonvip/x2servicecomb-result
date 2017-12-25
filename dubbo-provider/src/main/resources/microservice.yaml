@@ -1,0 +1,11 @@
+!!io.servicecomb.ServiceCombProperties
+APPLICATION_ID: dubbo-sample
+cse:
+  rest:
+    address: 0.0.0.0:20880
+  service:
+    registry:
+      address: http://10.229.42.155:30100
+service_description:
+  name: provider-service
+  version: 0.0.1

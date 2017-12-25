@@ -1,0 +1,9 @@
+!!io.servicecomb.ServiceCombProperties
+APPLICATION_ID: dubbo-sample
+cse:
+  service:
+    registry:
+      address: http://10.229.42.155:30100
+service_description:
+  name: consumer-service
+  version: 0.0.1
